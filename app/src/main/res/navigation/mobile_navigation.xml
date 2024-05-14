@@ -9,19 +9,56 @@
         android:id="@+id/navigation_home"
         android:name="com.example.moviedb.presentation.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search2"
+            app:destination="@id/navigation_search"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_navigation_home_to_detailActivity"
+            app:destination="@id/detailActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_favorite"
+            app:destination="@id/navigation_favorite"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.example.moviedb.presentation.search.SearchFragment"
         android:label="@string/tittle_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.moviedb.presentation.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_favorite"
+        android:name="com.example.favorites.FavoriteFragment"
+        android:label="@string/title_favorite"
+        app:moduleName="favorites"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_navigation_favorite_to_detailActivity"
+            app:destination="@id/detailActivity"/>
+    </fragment>
 
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.example.moviedb.presentation.detail.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail">
+        <argument
+            android:name="movie"
+            app:argType="com.example.core.domain.model.Movie" />
+    </activity>
 
 </navigation>

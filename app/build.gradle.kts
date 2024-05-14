@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id("kotlin-parcelize")
-    id ("kotlin-kapt")
-//    id("com.google.devtools.ksp")
+    id ("androidx.navigation.safeargs")
 }
 
 android {
@@ -41,45 +39,31 @@ android {
 
     }
 
-
-
-
     buildFeatures {
         viewBinding = true
     }
+    dynamicFeatures += setOf(":favorites")
 }
 
 dependencies {
+    implementation(project(":core"))
+    implementation (libs.androidx.core.splashscreen)
+//    implementation(libs.androidx.appcompat)
+//    implementation(libs.material)
+//    implementation(libs.androidx.activity)
+//    implementation(libs.androidx.constraintlayout)
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(libs.logging.interceptor)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.room.ktx)
-    implementation (libs.insert.koin.koin.core)
-    implementation (libs.insert.koin.koin.android)
-    implementation(libs.glide)
-    implementation(libs.androidx.paging.runtime.ktx)
-    implementation(libs.androidx.room.paging)
-    implementation(libs.androidx.swiperefreshlayout)
-    implementation(libs.androidx.activity)
-//    implementation (libs.koin.android.viewmodel)
-    kapt(libs.androidx.room.compiler)
-
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    annotationProcessor(libs.compiler)
+//    implementation(libs.androidx.room.runtime)
+//    implementation(libs.retrofit)
+//    implementation(libs.converter.gson)
+//    implementation(libs.logging.interceptor)
+//    implementation(libs.androidx.room.ktx)
+//    implementation (libs.insert.koin.koin.core)
+//    implementation (libs.insert.koin.koin.android)
+//    implementation(libs.androidx.room.paging)
+////    implementation (libs.koin.android.viewmodel)
+//    kapt(libs.androidx.room.compiler)
+//
+//
+//    annotationProcessor(libs.compiler)
 }

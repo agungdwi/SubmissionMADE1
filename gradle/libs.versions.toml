@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.0-alpha07"
-androidxRoomRuntime = "2.4.0"
+coreSplashscreen = "1.0.1"
 koinAndroid = "3.2.0"
 koinCoreVersion = "3.2.0"
 kotlin = "1.9.0"
@@ -27,9 +27,12 @@ glide = "4.13.2"
 compiler = "4.16.0"
 swiperefreshlayout = "1.1.0"
 activity = "1.9.0"
+navigationDynamicFeaturesFragment = "2.7.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragmentKtx" }
 androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "roomRuntime" }
@@ -57,9 +60,11 @@ glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "gl
 compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "compiler" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-navigation-dynamic-features-fragment = { group = "androidx.navigation", name = "navigation-dynamic-features-fragment", version.ref = "navigationDynamicFeaturesFragment" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 

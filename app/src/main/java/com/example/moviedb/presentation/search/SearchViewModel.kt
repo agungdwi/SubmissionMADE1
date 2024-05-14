@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.switchMap
-import com.example.moviedb.core.domain.MovieUseCase
+import com.example.core.domain.usecase.MovieUseCase
 
 class SearchViewModel(movieUseCase: MovieUseCase) : ViewModel() {
     private val title: MutableLiveData<String> = MutableLiveData()

@@ -1,18 +1,17 @@
 package com.example.moviedb.presentation.search
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.moviedb.core.data.Resource
-import com.example.moviedb.core.domain.Movie
+import com.example.core.data.Resource
+import com.example.core.domain.model.Movie
+import com.example.core.ui.MovieListAdapter
 import com.example.moviedb.databinding.FragmentSearchBinding
-import com.example.moviedb.presentation.DetailActivity
-import com.example.moviedb.core.ui.MovieListAdapter
 import com.example.moviedb.utils.calculateSpanCount
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -46,9 +45,8 @@ class SearchFragment : Fragment() {
         binding.rvMovies.adapter = adapter
 
         adapter.onItemClick = {movie: Movie ->
-            val intent = Intent(requireActivity(), DetailActivity::class.java)
-            intent.putExtra(DetailActivity.EXTRA_MOVIE,movie)
-            startActivity(intent)
+            val action = SearchFragmentDirections.actionNavigationSearchToDetailActivity(movie)
+            findNavController().navigate(action)
         }
 
         binding.searchView.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {

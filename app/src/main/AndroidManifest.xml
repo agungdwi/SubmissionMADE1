@@ -14,20 +14,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Moviedb"
+        android:theme="@style/Theme.Moviedb.Starting"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.DetailActivity"
-            android:exported="false" />
+            android:name=".presentation.detail.DetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Moviedb"/>
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:theme="@style/Theme.Moviedb.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 
