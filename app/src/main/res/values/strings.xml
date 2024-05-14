@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Moviedb</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Movies</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="overview">Overview</string>
+    <string name="arrow_back">Arrow Back</string>
+    <string name="movies_empty">Not Found</string>
+    <string name="retry">retry</string>
+    <string name="tittle_search">Search</string>
 </resources>

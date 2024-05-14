@@ -7,4 +7,23 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Primary colors -->
+    <color name="colorPrimary">#144272</color> <!-- Dark gray -->
+    <color name="colorPrimaryDark">#0A2647</color> <!-- Black -->
+    <color name="colorAccent">#205295</color> <!-- Blue -->
+
+    <!-- Text colors -->
+    <color name="textPrimary">#021429</color> <!-- White -->
+    <color name="textSecondary">#B3FFFFFF</color> <!-- Semi-transparent white -->
+    <color name="textAccent">#FFD600</color> <!-- Yellow -->
+
+    <!-- Background colors -->
+    <color name="backgroundPrimary">#0A2647</color> <!-- Dark gray -->
+    <color name="backgroundSecondary">#205295</color> <!-- Dark gray (slightly lighter) -->
+
+    <!-- Divider color -->
+    <color name="divider">#205295</color> <!-- Medium gray -->
+
+    <!-- Other colors -->
+    <color name="transparent">#00000000</color> <!-- Transparent -->
 </resources>
