@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Moviedb.Starting" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">@color/colorPrimaryDark</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/baseline_local_movies_24</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Moviedb</item>
+
+    </style>
+</resources>

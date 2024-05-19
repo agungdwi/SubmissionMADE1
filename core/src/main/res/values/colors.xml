@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Primary colors -->
+    <color name="colorPrimary">#144272</color> <!-- Dark gray -->
+    <color name="colorPrimaryDark">#0A2647</color> <!-- Black -->
+    <color name="colorAccent">#205295</color> <!-- Blue -->
+
+    <!-- Text colors -->
+    <color name="textPrimary">#021429</color> <!-- White -->
+    <color name="textSecondary">#B3FFFFFF</color> <!-- Semi-transparent white -->
+    <color name="textAccent">#FFD600</color> <!-- Yellow -->
+
+    <color name="transparent">#00000000</color>
+</resources>
